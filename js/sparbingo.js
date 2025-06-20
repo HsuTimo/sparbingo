@@ -80,6 +80,11 @@ function resetTechniques() {
 document.getElementById('resetButton').addEventListener('click', resetTechniques);
 renderGrid();
 
+// Fix for PWA
+window.addEventListener("beforeunload", () => {
+  localStorage.setItem('techniques', JSON.stringify(techniques));
+});
+
 //Add serviceworker
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./sw.js").then(() => {
