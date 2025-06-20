@@ -82,7 +82,7 @@ renderGrid();
 
 //Add serviceworker
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js").then(() => {
+  navigator.serviceWorker.register("./sw.js").then(() => {
     console.log("Service Worker registered!");
   });
 }

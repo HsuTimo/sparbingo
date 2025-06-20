@@ -1,11 +1,11 @@
-const CACHE_NAME = "v1";
+const CACHE_NAME = "v2";
 const ASSETS_TO_CACHE = [
-  "/",
-  "/index.html",
-  "/css/styles.css",
-  "/js/sparbingo.js",
-  "/icon/icon-192.png",
-  "/icon.icon-512.png"
+  "./",
+  "./index.html",
+  "./css/styles.css",
+  "./js/sparbingo.js",
+  "./icon/icon-192.png",
+  "./icon/icon-512.png"
 ];
 
 // Install event – caching files
