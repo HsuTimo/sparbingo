@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sparbingo</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Sparbingo</h1>
+  <div class="bingo-grid" id="bingoGrid"></div>
+
+  <script>
+    const techniques = [
+      "Vorslag","Nachraisen","Winden: Binnen Oberhangen","Winden: Binnen Unterhangen","Winden: Buiten Oberhangen","Winden: Buiten Unterhangen",
+"Duplieren Oberhangen", "Duplieren Unterhangen", "Absetzen", "Ansetzen", "Ablaufen", "Umslagen","Zucken","Durchwechsel","Abnemen","Raisen","Ubergreifen","Neder Stossen",
+"Mutatio Gladii","Bucker Nemen","Schwert Nemen","Schieldslac Binnen","Schieldslac Buiten",
+"Zornhaw","Sturtzhaw","Twerhaw","Krumphaw","Schaitelhaw","Schnitten Ober","Schnitten Unter","Einlaufen","Ringen","Uberlaufen","Halbschwert"	  
+    ];
+
+    const grid = document.getElementById('bingoGrid');
+
+    techniques.forEach(technique => {
+      const square = document.createElement('div');
+      square.className = 'square';
+      square.textContent = technique;
+      square.addEventListener('click', () => {
+        square.classList.toggle('checked');
+      });
+      grid.appendChild(square);
+    });
+  </script>
+</body>
+</html>
