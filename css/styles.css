@@ -47,3 +47,8 @@ h1 {
   color: white;
   text-decoration: line-through;
 }
+
+#resetButton {
+  font-family: "Montserrat", sans-serif;
+  padding: 0.5em;
+}
