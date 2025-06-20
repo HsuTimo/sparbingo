@@ -79,3 +79,10 @@ function resetTechniques() {
 
 document.getElementById('resetButton').addEventListener('click', resetTechniques);
 renderGrid();
+
+//Add serviceworker
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").then(() => {
+    console.log("Service Worker registered!");
+  });
+}
